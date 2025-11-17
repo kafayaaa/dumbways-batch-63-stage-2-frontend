@@ -22,24 +22,26 @@ export function ProductCard({ product }: ProductCardProps) {
       className="flex flex-col justify-between gap-6 bg-white dark:bg-gray-900 p-5 cursor-default rounded-xl shadow-xl"
     >
       <div className="flex flex-col gap-3">
-        <img
-          src={product.image}
-          alt=""
-          className="aspect-square object-cover rounded"
-        />
-        <h2 className="text-2xl font-bold text-slate-950 dark:text-slate-50">
+        <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+          <img
+            src={product.image}
+            alt=""
+            className="aspect-square object-contain rounded"
+          />
+        </div>
+        <h2 className="text-xl md:text-2xl font-bold text-slate-950 dark:text-slate-50">
           $ {product.price.toLocaleString("us-US")}
         </h2>
         <Link
           to={`/products/${product.id}`}
-          className="text-xl font-bold text-emerald-400 uppercase"
+          className="text-md md:text-lg lg:text-xl font-bold text-emerald-400 uppercase"
         >
           {product.title}
         </Link>
         {/* <p className="text-slate-700 truncate">{product.description}</p> */}
       </div>
       <button
-        className={`w-full py-4 font-bold ${
+        className={`w-full py-2 md:py-3 lg:py-4 text-sm md:text-base font-bold ${
           added
             ? "text-emerald-500 border-2 border-emerald-500 cursor-default"
             : "bg-emerald-400 hover:bg-emerald-500 text-white cursor-pointer"

@@ -32,7 +32,7 @@ export default function LoginPage() {
       )}
       <form
         onSubmit={handleLogin}
-        className="w-1/3 py-10 px-16 flex flex-col justify-center items-center gap-5 bg-white dark:bg-gray-900 rounded-xl shadow-xl"
+        className="w-3/4 md:w-1/2 lg::w-1/3 py-10 px-10 md:px-16 flex flex-col justify-center items-center gap-5 bg-white dark:bg-gray-900 rounded-xl shadow-xl"
       >
         <h1 className="text-4xl font-bold uppercase text-emerald-500 mb-3">
           Login

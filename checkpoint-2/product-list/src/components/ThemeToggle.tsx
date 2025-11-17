@@ -18,7 +18,7 @@ export default function ThemeTogle() {
   }, [darkMode]);
 
   return (
-    <Button onClick={() => setDarkMode(!darkMode)}>
+    <Button onClick={() => setDarkMode(!darkMode)} className="w-full md:w-fit">
       {darkMode ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </Button>
   );

@@ -36,18 +36,10 @@ function ProductPage() {
     return () => clearTimeout(timer);
   }, [search, products]);
 
-  // const toggleCart = (productId: number) => {
-  //   setCart((prevCart) =>
-  //     prevCart.includes(productId)
-  //       ? prevCart.filter((id) => id !== productId)
-  //       : [...prevCart, productId]
-  //   );
-  // };
-
   return (
     <>
-      <div className="w-full mt-20 py-20 bg-slate-50 dark:bg-gray-950 flex flex-col justify-center items-center gap-8">
-        <h1 className="text-5xl font-bold text-slate-950 dark:text-emerald-500">
+      <div className="w-full mt-20 py-10 md:py-20 px-3 bg-slate-50 dark:bg-gray-950 flex flex-col justify-center items-center gap-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-950 dark:text-emerald-500 cursor-default">
           Product List ({carts.length})
         </h1>
         <input
@@ -60,7 +52,7 @@ function ProductPage() {
         {loading ? (
           <p className="text-gray-500 text-2xl font-bold mt-10">Loading...</p>
         ) : filtered.length > 0 ? (
-          <div className="w-7xl grid grid-cols-4 gap-6">
+          <div className="w-full lg:w-7xl grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filtered.map((product) => (
               <ProductCard
                 key={product.id}
